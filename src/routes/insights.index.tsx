@@ -3,12 +3,6 @@ import { useEffect, useState } from "react";
 import { loadData, MOODS, type AppData } from "@/lib/storage";
 
 export const Route = createFileRoute("/insights/")({
-  head: () => ({
-    meta: [
-      { title: "Insights — Dhamma Reflection" },
-      { name: "description", content: "Patterns of your practice." },
-    ],
-  }),
   component: InsightsPage,
 });
 

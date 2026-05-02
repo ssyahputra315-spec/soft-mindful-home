@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { loadData, saveData, moodEmoji, type JournalEntry } from "@/lib/storage";
 
 export const Route = createFileRoute("/journal/$id")({
-  head: () => ({ meta: [{ title: "Reflection — Dhamma Reflection" }] }),
   component: EntryPage,
   notFoundComponent: () => (
     <div className="py-20 text-center">

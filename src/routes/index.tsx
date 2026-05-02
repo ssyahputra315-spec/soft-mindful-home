@@ -4,12 +4,6 @@ import { loadData, saveData, todayKey, MOODS, type Mood } from "@/lib/storage";
 import { QUOTES } from "@/lib/quotes";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Today — Dhamma Reflection" },
-      { name: "description", content: "Daily Dhamma quote, mood check-in and reflection." },
-    ],
-  }),
   component: TodayPage,
 });
 

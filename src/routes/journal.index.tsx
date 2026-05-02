@@ -3,12 +3,6 @@ import { useEffect, useState } from "react";
 import { loadData, moodEmoji, type JournalEntry } from "@/lib/storage";
 
 export const Route = createFileRoute("/journal/")({
-  head: () => ({
-    meta: [
-      { title: "Journal — Dhamma Reflection" },
-      { name: "description", content: "Your reflections, gratitude and acts of kindness." },
-    ],
-  }),
   component: JournalList,
 });
 
