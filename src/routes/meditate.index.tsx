@@ -2,12 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 
 export const Route = createFileRoute("/meditate/")({
-  head: () => ({
-    meta: [
-      { title: "Meditate — Dhamma Reflection" },
-      { name: "description", content: "Calm meditation timer." },
-    ],
-  }),
   component: MeditatePage,
 });
 

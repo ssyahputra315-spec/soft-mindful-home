@@ -3,7 +3,6 @@ import { useState } from "react";
 import { loadData, saveData, MOODS, type Mood } from "@/lib/storage";
 
 export const Route = createFileRoute("/journal/new")({
-  head: () => ({ meta: [{ title: "New Reflection — Dhamma Reflection" }] }),
   component: NewReflection,
 });
 

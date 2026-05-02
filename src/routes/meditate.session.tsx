@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { loadData, saveData } from "@/lib/storage";
 
 export const Route = createFileRoute("/meditate/session")({
-  head: () => ({ meta: [{ title: "Session — Dhamma Reflection" }] }),
   validateSearch: (s: Record<string, unknown>) => ({ duration: Number(s.duration) || 10 }),
   component: SessionPage,
 });
