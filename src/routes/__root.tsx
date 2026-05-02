@@ -1,5 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts, useLocation } from "@tanstack/react-router";
-import appCss from "../styles.css?url";
+import { Outlet, Link, createRootRoute, useLocation } from "@tanstack/react-router";
 
 function NotFoundComponent() {
   return (
@@ -16,37 +15,9 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" },
-      { name: "theme-color", content: "#F5F1E8" },
-      { title: "Dhamma Reflection — Mindful Companion" },
-      { name: "description", content: "A calm offline companion for daily Dhamma quotes, mood tracking, journaling and meditation." },
-      { property: "og:title", content: "Dhamma Reflection — Mindful Companion" },
-      { name: "twitter:title", content: "Dhamma Reflection — Mindful Companion" },
-      { property: "og:description", content: "A calm offline companion for daily Dhamma quotes, mood tracking, journaling and meditation." },
-      { name: "twitter:description", content: "A calm offline companion for daily Dhamma quotes, mood tracking, journaling and meditation." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c6a546e4-3b3e-4ae3-bfcb-b60b35f8127f/id-preview-6901e8a6--a71eec6c-fa2e-4deb-baca-42d34ff6d864.lovable.app-1776501428223.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c6a546e4-3b3e-4ae3-bfcb-b60b35f8127f/id-preview-6901e8a6--a71eec6c-fa2e-4deb-baca-42d34ff6d864.lovable.app-1776501428223.png" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:type", content: "website" },
-    ],
-    links: [{ rel: "stylesheet", href: appCss }],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head><HeadContent /></head>
-      <body>{children}<Scripts /></body>
-    </html>
-  );
-}
 
 const TABS = [
   { to: "/", label: "Today", icon: "☀️" },
